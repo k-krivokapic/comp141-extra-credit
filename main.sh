@@ -15,5 +15,5 @@ mount | grep "/dev" -A 5 > mount.txt
 > permissions.txt
 chmod 777 permissions.txt
 TESTENV1=test
-cat ten-lines.txt | grep -E '^{3,}' > regex.txt
+cat ten-lines.txt | grep -Eo '\b[A-Za-z]{3,}\b' > regex.txt
 cd ..
